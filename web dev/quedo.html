@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border-width: 0px 0px 2px 0px;
+            margin: 3%;
+        }
+        input:focus{
+            outline: 0px;
+            box-shadow: 3px 5px 5px grey;
+        }
+        input:required{
+            border-color:red;
+        }
+        input:optional{
+            border-color:green;
+        }
+        input:disabled{
+            border-width: 0px;
+            background:grey;
+            color: white;
+        }
+        input:enabled{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        input:in-range{
+            font-weight: 900;
+        }
+        input:out-of-range{
+            color: red;
+        }
+        input:valid{
+        color: green;
+        }
+        input{
+            color: red;
+        }
+        input:placeholder-shown{
+            border-color: red!important;
+            font-size: 25px;
+        }
+        p{
+            font-size: 20px;
+        }
+        p:nth-child(odd){
+            color :red;
+        }
+        p:has(span){
+            color: red;
+        }
+        :where(h1,h2){
+
+        }
+        button:hover{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="First Name" required/><br>
+        <input type="text" placeholder="Middel Name"/><br>
+        <input type="text" placeholder="Last Name" required/><br>
+        <input type="date"/><br>
+        <input type="text" placeholder="Mathura" disabled/><br>
+        <input type="number"min="10"max="100"/><br>
+        <input type="email" placeholder="Email"/>
+    </form>
+    <p>pera 1</p>
+    <p>pera 2</p>
+    <p><span>3</span></p>
+    <p>pera 4</p>
+    <div>
+        <h1>heading1</h1>
+        <h1>heading2</h1>
+    </div>
+
+    <button>click me </button>
+
+</body>
+</html>

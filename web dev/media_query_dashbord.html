@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-areas:
+        "box1 box1 box1 box1"
+        "box2 box3 box4 box5"
+        "box2 box6 box7 box8"
+        "box2 box9 box9 box10"
+        "box2 box9 box9 box10"
+        "box11 box11 box11 box11";
+    }
+
+    .box {
+      background-color: purple;
+      min-height: 100px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 2px 0px 5px purple;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (min-width: 500px) {
+      .container {
+        grid-template-areas:
+          "box1 box1 box1 box1"
+          "box2 box3 box4 box5"
+          "box6 box7 box8 box8"
+          "box9 box9 box10 box10"
+          "box11 box11 box11 box11";
+      }
+    }
+
+    @media (min-width: 800px) {
+      .container {
+        grid-template-areas:
+          "box1 box1 box1 box1"
+          "box2 box2 box3 box4"
+          "box5 box6 box7 box8"
+          "box9 box9 box10 box10"
+          "box11 box11 box11 box11";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" style="grid-area:box1;">Header</div>
+    <div class="box" style="grid-area:box2;">Box 0</div>
+    <div class="box" style="grid-area:box3;">Box 1</div>
+    <div class="box" style="grid-area:box4;">Box 2</div>
+    <div class="box" style="grid-area:box5;">Box 3</div>
+    <div class="box" style="grid-area:box6;">Box 4</div>
+    <div class="box" style="grid-area:box7;">Box 5</div>
+    <div class="box" style="grid-area:box8;">Box 6</div>
+    <div class="box" style="grid-area:box9;">Box 7</div>
+    <div class="box" style="grid-area:box10;">Box 8</div>
+    <div class="box" style="grid-area:box11;">Fotter</div>
+  </div>
+</body>
+</html>

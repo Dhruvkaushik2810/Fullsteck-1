@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 50px;
+            display: flex;
+            flex-basis: 100px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* .container>div{
+            width: 100px;
+        } */
+        .container>div>a{
+            text-decoration: none;
+            color:blue;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div>company</div>
+        <div> <a href="/">home</a></div>
+        <div><a href="/">about</a></div>
+        <div><a href="/">contect</a></div>
+    </div>
+</body>
+</html>

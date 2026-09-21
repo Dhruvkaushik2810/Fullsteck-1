@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spider-Man Stacking Cards</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image:linear-gradient(to top left,black, white) ;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* --------------------------------
+           INTRO SECTION
+        -------------------------------- */
+
+        .intro {
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: clamp(50px, 10vw, 130px);
+            letter-spacing: -5px;
+        }
+
+        .intro p {
+            margin-top: 20px;
+            color: #999;
+            font-size: 18px;
+        }
+
+
+        /* --------------------------------
+           CARDS SECTION
+        -------------------------------- */
+
+        .cards-container {
+            width: 100%;
+            padding-bottom: 150px;
+        }
+
+
+        /* --------------------------------
+           CARD
+        -------------------------------- */
+
+        .card {
+            position: sticky;
+
+            width: 80%;
+            max-width: 1000px;
+
+            height: 550px;
+
+            margin: 0 auto 120px;
+
+            top: 80px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.8);
+
+            background: #111;
+
+            transform-origin: top center;
+        }
+
+
+        /* --------------------------------
+           DIFFERENT TOP POSITION
+           -------------------------------- */
+
+        .card:nth-child(1) {
+            top: 80px;
+        }
+
+        .card:nth-child(2) {
+            top: 100px;
+        }
+
+        .card:nth-child(3) {
+            top: 120px;
+        }
+
+        .card:nth-child(4) {
+            top: 140px;
+        }
+
+
+        /* --------------------------------
+           IMAGE
+        -------------------------------- */
+
+        .card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.8s ease;
+        }
+
+
+        /* --------------------------------
+           IMAGE ZOOM ON HOVER
+        -------------------------------- */
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+
+        /* --------------------------------
+           DARK GRADIENT
+        -------------------------------- */
+
+        .card::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.9),
+                    rgba(0, 0, 0, 0.1) 60%,
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* --------------------------------
+           CARD CONTENT
+        -------------------------------- */
+
+        .content {
+            position: absolute;
+
+            left: 50px;
+            bottom: 45px;
+
+            z-index: 2;
+        }
+
+        .number {
+            font-size: 18px;
+
+            color: #aaa;
+
+            margin-bottom: 10px;
+        }
+
+        .content h2 {
+            font-size: clamp(40px, 6vw, 80px);
+
+            line-height: 0.9;
+
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            max-width: 500px;
+
+            color: #ddd;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        /* --------------------------------
+           LAST SECTION
+        -------------------------------- */
+
+        .end {
+            height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .end h2 {
+            font-size: clamp(40px, 8vw, 100px);
+        }
+
+
+        /* --------------------------------
+           MOBILE
+        -------------------------------- */
+
+        @media (max-width: 700px) {
+
+            .card {
+                width: 90%;
+                height: 500px;
+
+                margin-bottom: 100px;
+            }
+
+            .content {
+                left: 25px;
+                bottom: 30px;
+            }
+
+            .content h2 {
+                font-size: 50px;
+            }
+
+            .content p {
+                font-size: 15px;
+
+                padding-right: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <div>
+
+            <h1>SPIDER-MAN</h1>
+
+            <p>
+                Scroll down to see the cards stack
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STACKING CARDS --><section class="cards-container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img
+            src="https://musiccitydrivein.com/wp-content/uploads/2021/12/df_12080_rv2_1000x563_thumbnail.0.jpeg"
+            alt="Tom Holland Spider-Man">
+
+        <div class="content">
+            <span>01</span>
+            <h2>SPIDER-MAN</h2>
+            <p>Tom Holland as Spider-Man.</p>
+        </div>
+    </div>
+
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img
+          src="https://ovicio.com.br/wp-content/uploads/2019/05/20190506-spider-man-far-from-home-trailer-1.jpg"
+          alt="Spider-Man Far From Home">
+
+        <div class="content">
+            <span>02</span>
+            <h2>FAR FROM HOME</h2>
+            <p>Spider-Man continues his journey.</p>
+        </div>
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img
+            src="https://cdn.mos.cms.futurecdn.net/v2/t%3A0%2Cl%3A280%2Ccw%3A720%2Cch%3A720%2Cq%3A80%2Cw%3A720/8M6Nq3KKfv8MojzZQwNBmL.jpg"
+            alt="Spider-Man No Way Home">
+
+        <div class="content">
+            <span>03</span>
+            <h2>NO WAY HOME</h2>
+            <p>One of Spider-Man's biggest battles.</p>
+        </div>
+    </div>
+
+
+    <!-- CARD 4 -->
+   <div class="card">
+
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Spider-Man_Homecoming_by_Gage_Skidmore.jpg"
+        alt="Spider-Man Homecoming">
+
+    <div class="content">
+        <span>04</span>
+        <h2>HOMECOMING</h2>
+        <p>The beginning of Tom Holland's Spider-Man.</p>
+    </div>
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>

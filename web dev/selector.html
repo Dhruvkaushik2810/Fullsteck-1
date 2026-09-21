@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        input[type="email"] {
+            border-radius: 15px;
+        }
+
+        li[data-mydata="true"] {
+            background: yellow;
+        }
+
+        #special {
+            font-family: serif;
+            font-size: x-large;
+            font-style: oblique;
+        }
+
+        .highlight {
+            background: lightgreen;
+            font-family: cursive;
+            font-size: xx-large;
+        }
+
+        li:hover {
+            cursor: pointer;
+            background: orange;
+        }
+
+        li::after {
+            content: " ✔";
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selector Showcase</h2>
+    <ul>
+        <li data-mydata="true">Universal</li>
+        <li>Element</li>
+        <li>Attribute</li>
+        <li id="special">Id</li>
+        <li class="highlight">Class</li>
+        <li>Combination</li>
+        <li>Pseudo Class</li>
+        <li>Pseudo Element</li>
+        <input type="email" placeholder="Enter email">
+        <input type="email" placeholder="Enter email">
+    </ul>
+</body>
+</html>

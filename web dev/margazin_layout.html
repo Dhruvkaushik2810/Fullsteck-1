@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            gap: 9px;
+            grid-template-areas:
+            "box1 box1 box2 "
+            "box1 box1 box3"
+            "box4 box5 box6";
+        }
+        .box{
+            background-color: purple;
+            min-height: 100px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 0px 5px purple;
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+    
+        }
+
+    </style>
+  </head>
+    <body>
+        <div class="container">
+            <div class="box"style="grid-area:box1">FEATURED ARTICLE</div>
+            <div class="box"style="grid-area:box2">News1</div>
+            <div class="box"style="grid-area:box3">News2</div>
+            <div class="box"style="grid-area:box4">Advertisment</div>
+            <div class="box"style="grid-area:box5">Article</div>
+            <div class="box"style="grid-area:box6">News3</div>
+        </div>
+    </body>
+</html>

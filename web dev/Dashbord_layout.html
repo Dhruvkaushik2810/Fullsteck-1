@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            gap: 9px;
+            grid-template-areas:
+            "box1 box1 box1 "
+            "box2 box3 box3"
+            "box2 box4 box5"
+            "box6 box6 box6";
+        }
+        .box{
+            background-color: purple;
+            min-height: 100px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 0px 5px purple;
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+    
+        }
+
+    </style>
+  </head>
+    <body>
+        <div class="container">
+            <div class="box"style="grid-area:box1">HEADER</div>
+            <div class="box"style="grid-area:box2">2</div>
+            <div class="box"style="grid-area:box3">3</div>
+            <div class="box"style="grid-area:box4">4</div>
+            <div class="box"style="grid-area:box5">5</div>
+            <div class="box"style="grid-area:box6">6</div>
+            <div class="box"style="grid-area:box7">7</div>
+            <div class="box"style="grid-area:box8">8</div>
+            <div class="box"style="grid-area:box9">9</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glow Dot</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #050505;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    position: relative;
+
+    box-shadow:
+        0 0 5px white,
+        0 0 15px #e94057;
+}
+
+    .dot::after {
+        content: "";
+
+        position: absolute;
+
+        width: 150px;
+        height: 150px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        background: radial-gradient(
+            circle,
+            rgba(233, 64, 87, 0.5) 0%,
+            rgba(233, 64, 87, 0.2) 30%,
+            transparent 70%
+        );
+
+        filter: blur(10px);
+
+        z-index: -1;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="dot"></div>
+
+</body>
+
+</html>
