@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>15 Minute Countdown</title>
+</head>
+<body>
+
+    <h1 id="timer">15:00</h1>
+
+    <script>
+
+        let time = 15 * 60;
+
+        let interval = setInterval(function () {
+
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            document.getElementById("timer").innerText =
+                minutes + ":" + seconds;
+
+            time--;
+
+            if (time < 0) {
+                clearInterval(interval);
+            }
+
+        }, 1000);
+
+        setTimeout(function () {
+            alert("Time is up!");
+        }, 15 * 60 * 1000);
+
+    </script>
+
+</body>
+</html>

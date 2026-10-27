@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val">
+    <button onclick="checkAndShow()">check Amstrong</button>
+    <script>
+        function checkAndShow(){
+            let val=document.getElementById("val").value;
+            if(isAmstrong(val)){
+                console.log("yes")
+            }else{
+                console.log("no")
+            }
+        }
+        function isAmstrong(n){
+                
+                let num = parseInt(n); 
+                let digits = n.length; 
+                let sum = 0;
+
+                for(let i=0; i<digits; i++){
+                    let d = parseInt(n[i]); 
+                    sum += Math.pow(d, digits);
+                }
+                return sum === num;
+
+        }
+    </script>
+</body>
+</html>

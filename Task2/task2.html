@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Checkout Page</title>
+    <style>
+        body{
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        .container{
+            display: flex;
+            gap: 50px;
+        }
+
+        .product{
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .summary{
+            border: 1px solid black;
+            padding: 15px;
+            width: 200px;
+            height: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Checkout Page</h1>
+
+<div class="container">
+
+    <div id="products">
+
+        <div class="product">
+            <h3>Laptop</h3>
+            <p>Price: ₹50000</p>
+
+            Quantity:
+            <input type="number" value="1" min="1"
+            onchange="updateSummary()">
+
+            <button onclick="removeProduct(this)">
+                Remove
+            </button>
+        </div>
+
+        <div class="product">
+            <h3>Mouse</h3>
+            <p>Price: ₹500</p>
+
+            Quantity:
+            <input type="number" value="1" min="1"
+            onchange="updateSummary()">
+
+            <button onclick="removeProduct(this)">
+                Remove
+            </button>
+        </div>
+
+    </div>
+
+    <div class="summary">
+        <h2>Checkout Summary</h2>
+
+        <p>Total Products:
+            <span id="totalProducts">0</span>
+        </p>
+
+        <p>Total Price:
+            ₹<span id="totalPrice">0</span>
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+function updateSummary(){
+
+    let products =
+    document.querySelectorAll(".product");
+
+    let totalProducts = 0;
+    let totalPrice = 0;
+
+    products.forEach(product => {
+
+        let quantity =
+        Number(product.querySelector("input").value);
+
+        let price =
+        Number(
+            product.querySelector("p")
+            .innerText.replace("Price: ₹","")
+        );
+
+        totalProducts += quantity;
+        totalPrice += quantity * price;
+    });
+
+    document.getElementById("totalProducts")
+    .innerText = totalProducts;
+
+    document.getElementById("totalPrice")
+    .innerText = totalPrice;
+}
+
+function removeProduct(button){
+    button.parentElement.remove();
+    updateSummary();
+}
+
+updateSummary();
+
+</script>
+
+</body>
+</html>
