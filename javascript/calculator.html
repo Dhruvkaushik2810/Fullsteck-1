@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #222;
+    }
+    .calculator{
+        background: #333;
+        padding:20px;
+        border-radius: 15px;
+        width: 320px;
+    }
+</style>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" value="0 readonly">
+        <div class="button">
+            <button class="clear">AC</button>
+            <button class="delete">Del</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            
+            <button class="operator">*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+
+            <button class="operator">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal">=</button>
+        </div>
+    </div>
+    <script src="javascript/calculator.js"></script>
+</body>
+</html>
