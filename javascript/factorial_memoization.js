@@ -20,6 +20,6 @@ const factorial = memoizeFactorial(function fact(n) {
     return n * fact(n - 1);
 });
 
-console.log(factorial(5)); // 120
-console.log(factorial(5)); // from cache -> 120
-console.log(factorial(6)); // 720
+console.log(factorial(5)); 
+console.log(factorial(5)); 
+console.log(factorial(6)); 
